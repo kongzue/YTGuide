@@ -1,0 +1,148 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="voicenote.stx.com.myapplication.RoomActivity"
+    android:background="#ffffffff">
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:id="@+id/listView"
+        android:layout_alignTop="@+id/imageView4"
+        android:layout_alignLeft="@+id/imageView4"
+        android:layout_alignStart="@+id/imageView4"
+        android:layout_marginTop="78dp"
+        android:layout_alignParentBottom="true"
+        android:divider="#00000000"
+        android:dividerHeight="0dip"
+        android:background="#ffffffff" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="95dp"
+        android:id="@+id/imageView4"
+        android:background="@drawable/p_rec_bkg"
+        android:clickable="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="kongzue的房间"
+        android:id="@+id/text_Name"
+        android:textColor="#ffffffff"
+        android:clickable="true"
+        android:textSize="22sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="36dp" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
+        android:id="@+id/rec_status_bkg"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/p_rec_status_bkg" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/btn_rec_shadow"
+        android:background="@drawable/btn_rec_down"
+        android:clickable="true"
+        android:layout_alignTop="@+id/btn_rec"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/btn_rec"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_rec"
+        android:layout_margin="20dp"
+        android:clickable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_status"
+        android:layout_alignTop="@+id/rec_status_bkg"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffffff"
+        android:textSize="22sp"
+        android:layout_marginTop="130dp"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:id="@+id/newBox"
+        android:visibility="gone"
+        android:gravity="bottom"
+        android:background="#64000000" >
+
+        <ImageView
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:id="@+id/btn_publish"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_publish"
+            android:alpha="1"
+            android:clickable="true"
+            android:layout_marginBottom="3dp" />
+
+        <ImageView
+            android:layout_width="360dp"
+            android:layout_height="360dp"
+            android:id="@+id/imageView3"
+            android:background="@drawable/p_add_bkg"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="60dp"
+            android:clickable="false" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="180dp"
+            android:inputType="textMultiLine"
+            android:hint="在此输入内容"
+            android:gravity="top"
+            android:ems="10"
+            android:id="@+id/edit_newBox"
+            android:layout_alignTop="@+id/imageView3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="120dp"
+            android:background="#ffffffff" />
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text="识别不准确?"
+            android:id="@+id/btn_notTrue"
+            android:gravity="center"
+            android:layout_alignTop="@+id/imageView3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="75dp"
+            android:textColor="#ff5786ff"
+            android:clickable="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

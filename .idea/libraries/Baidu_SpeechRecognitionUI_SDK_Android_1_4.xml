@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Baidu-SpeechRecognitionUI-SDK-Android-1.4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/YTGAPP/libs/Baidu-SpeechRecognitionUI-SDK-Android-1.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

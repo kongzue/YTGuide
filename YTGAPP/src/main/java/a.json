@@ -1,0 +1,36 @@
+{
+  "VoiceRecords": [
+    {
+      "actionErrors": [],
+      "actionMessages": [],
+      "dataMap": {},
+      "errorMessages": [],
+      "errors": {},
+      "fieldErrors": {},
+      "locale": "zh_CN",
+      "roomid": "11165",
+      "texts": null,
+      "uuid": "145fd419-3198-4c10-b5ff-8a3f8e8d5d3f",
+      "vid": "4f9065c9-a68f-4a31-b00c-ce2d97b72af3",
+      "vusername": "sanjin6035",
+      "word": "第一条测试发言"
+    },
+    {
+      "actionErrors": [],
+      "actionMessages": [],
+      "dataMap": {},
+      "errorMessages": [],
+      "errors": {},
+      "fieldErrors": {},
+      "locale": "zh_CN",
+      "roomid": "11165",
+      "texts": null,
+      "uuid": "145fd419-3198-4c10-b5ff-8a3f8e8d5d3f",
+      "vid": "6f55b29e-6599-43a6-be02-a9fe1f2336ea",
+      "vusername": "sanjin6035",
+      "word": "第二条测试发言"
+    }
+  ],
+  "message": "查询成功",
+  "status": true
+}

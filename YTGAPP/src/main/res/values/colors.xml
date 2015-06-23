@@ -1,0 +1,9 @@
+<resources>
+    <color name="tab_title_on">#ffffffff</color>
+    <color name="tab_title_off">#7cffffff</color>
+    <color name="btn_setting_off">#ffffffff</color>
+    <color name="btn_setting_down">#ffe2e2e2</color>
+    <color name="btn_exit_off">#ffff4200</color>
+    <color name="btn_exit_down">#ffc23300</color>
+    <color name="color_error">#FFFF3300</color>
+</resources>

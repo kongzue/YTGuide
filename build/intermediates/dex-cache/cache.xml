@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="F:\Android\workspace\YTGuide\YTGAPP\libs\Baidu-SpeechRecognitionUI-SDK-Android-1.4.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="e513cbaea2a7667c993664634f2d477f254f4eb9">
+        <dex dex="F:\Android\workspace\YTGuide\YTGAPP\build\intermediates\pre-dexed\debug\Baidu-SpeechRecognitionUI-SDK-Android-1.4-63f74116e8ebd3541018aa7645be5acc780c5a26.jar" />
+    </item>
+    <item
+        jar="F:\Android\workspace\YTGuide\YTGAPP\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="F:\Android\workspace\YTGuide\YTGAPP\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-665dde45aaab1cb9db6bd3a544a03f8a80c22f6d.jar" />
+    </item>
+    <item
+        jar="F:\Android\workspace\YTGuide\YTGAPP\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="F:\Android\workspace\YTGuide\YTGAPP\build\intermediates\pre-dexed\debug\classes-cd587e3de30f2f4e36be72e8870f24857b516cb0.jar" />
+    </item>
+    <item
+        jar="F:\Android\workspace\YTGuide\YTGAPP\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="F:\Android\workspace\YTGuide\YTGAPP\build\intermediates\pre-dexed\debug\classes-176bb1ae62bbc8110cc4f631951005318a2b25a1.jar" />
+    </item>
+    <item
+        jar="F:\Android\workspace\YTGuide\YTGAPP\libs\galaxy.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="34545ff3c9ca539c62095d104a6723eafeeea18f">
+        <dex dex="F:\Android\workspace\YTGuide\YTGAPP\build\intermediates\pre-dexed\debug\galaxy-4ec56f4f9718d51fa8e5c3c05540d92fa486d77b.jar" />
+    </item>
+    <item
+        jar="F:\Android\workspace\YTGuide\YTGAPP\libs\VoiceRecognition-1.4.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="0a66811dbecc361e4b2afa0ba71cbd6477f9c512">
+        <dex dex="F:\Android\workspace\YTGuide\YTGAPP\build\intermediates\pre-dexed\debug\VoiceRecognition-1.4-1b70268efc431cc8f44065b6897135338b0c6d0c.jar" />
+    </item>
+    <item
+        jar="D:\sdk\Android\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="F:\Android\workspace\YTGuide\YTGAPP\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-52645e8755b3756cf30c62957b2789e5423e0ce5.jar" />
+    </item>
+
+</items>

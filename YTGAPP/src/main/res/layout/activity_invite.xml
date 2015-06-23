@@ -1,0 +1,268 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="voicenote.stx.com.myapplication.InviteActivity"
+    android:background="#ffffffff">
+
+
+    <HorizontalScrollView
+        android:id="@+id/tab_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="78dp"
+        android:layout_above="@+id/layout_room">
+
+        <LinearLayout
+            android:id="@+id/tab_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/tab_content_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.9"
+        android:flipInterval="500"
+        android:persistentDrawingCache="animation"
+        android:layout_marginTop="78dp"
+        android:layout_above="@+id/layout_room" />
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scroll_box"
+        android:scrollbars="none"
+        android:layout_marginTop="78dp"
+        android:clickable="false"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="400dp"
+            android:layout_height="fill_parent">
+
+            <ListView
+                android:layout_width="360dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/list_invite"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+
+                tools:listitem="@layout/invite_listitem"
+                android:layout_above="@+id/layout_room" />
+
+            <ListView
+                tools:listitem="@layout/invite_listitem"
+                android:layout_width="360dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/list_friend"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_above="@+id/layout_room" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/layout_room"
+        android:background="#ffdddddd"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/image_face1"
+            android:background="@drawable/face_default"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="15dp" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/image_face2"
+            android:background="@drawable/face_default"
+            android:layout_alignTop="@+id/image_face1"
+            android:layout_toRightOf="@+id/image_face1"
+            android:layout_toEndOf="@+id/image_face1"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/image_face3"
+            android:background="@drawable/face_default"
+            android:layout_alignTop="@+id/image_face2"
+            android:layout_toRightOf="@+id/image_face2"
+            android:layout_toEndOf="@+id/image_face2"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/image_face4"
+            android:background="@drawable/face_default"
+            android:layout_alignTop="@+id/image_face3"
+            android:layout_toRightOf="@+id/image_face3"
+            android:layout_toEndOf="@+id/image_face3"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/image_face5"
+            android:background="@drawable/face_default"
+            android:layout_alignTop="@+id/image_face4"
+            android:layout_toRightOf="@+id/image_face4"
+            android:layout_toEndOf="@+id/image_face4"
+            android:layout_marginLeft="10dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5人已被邀请"
+            android:id="@+id/text_room"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/image_face5"
+            android:layout_toEndOf="@+id/image_face5"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/imageView14"
+            android:background="@drawable/btn_open"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="15dp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="95dp"
+        android:id="@+id/title_bkg"
+        android:background="@drawable/p_title_bkg"
+        android:clickable="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="大厅"
+        android:id="@+id/btn_hall"
+        android:textColor="#ffffffff"
+        android:clickable="true"
+        android:textSize="20sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="36dp" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="3dp"
+        android:id="@+id/tab_line1"
+        android:background="#ffffffff"
+        android:layout_alignTop="@+id/tab_scroll"
+        android:layout_alignLeft="@+id/btn_hall"
+        android:layout_alignStart="@+id/btn_hall"
+        android:visibility="visible"
+        android:layout_marginTop="-3.5dp"
+        android:layout_marginLeft="-5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="历史"
+        android:id="@+id/btn_friends"
+        android:textColor="#7cffffff"
+        android:clickable="true"
+        android:textSize="20sp"
+        android:layout_alignTop="@+id/btn_hall"
+        android:layout_toRightOf="@+id/btn_hall"
+        android:layout_toEndOf="@+id/btn_hall"
+        android:layout_marginLeft="22dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="设置"
+        android:id="@+id/btn_setting"
+        android:textColor="#7cffffff"
+        android:clickable="true"
+        android:textSize="20sp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_alignTop="@+id/btn_friends"
+        android:layout_toRightOf="@+id/btn_friends"
+        android:layout_toEndOf="@+id/btn_friends" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/btn_search"
+        android:background="@drawable/btn_search"
+        android:layout_alignTop="@+id/btn_setting"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp"
+        android:visibility="visible" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="3dp"
+        android:id="@+id/tab_line2"
+        android:background="#ffffffff"
+        android:visibility="gone"
+        android:layout_alignTop="@+id/tab_scroll"
+        android:layout_alignLeft="@+id/btn_friends"
+        android:layout_alignStart="@+id/btn_friends"
+        android:layout_marginTop="-3.5dp"
+        android:layout_marginLeft="-5dp" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="3dp"
+        android:id="@+id/tab_line3"
+        android:background="#ffffffff"
+        android:visibility="gone"
+        android:layout_alignTop="@+id/tab_scroll"
+        android:layout_alignLeft="@+id/btn_setting"
+        android:layout_alignStart="@+id/btn_setting"
+        android:layout_marginTop="-3.5dp"
+        android:layout_marginLeft="-5dp" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:id="@+id/btn_relink"
+        android:background="@drawable/btn_relink"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:alpha="0.5"
+        android:clickable="true"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

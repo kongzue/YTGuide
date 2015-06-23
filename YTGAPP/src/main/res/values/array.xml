@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="EditDataSettingArray">
+        <item>修改头像</item>
+        <item>修改邮箱</item>
+        <item>修改密码</item>
+    </array>
+    <array name="MessageMenu">
+        <item>复制</item>
+        <item>编辑</item>
+        <item>分享</item>
+    </array>
+</resources>
