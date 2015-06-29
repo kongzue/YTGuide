@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,26 +34,72 @@ public class recActivity extends BaseActivity {
     private String[] yuyinChoose;
     private VoiceRecognitionClient client;
     private BaiduASRDigitalDialog dlgVoiceRecognize;
-    
+
+    private ImageView btn_re;
+    private ImageView btn_ok;
+    private ImageView btn_no;
+
+    private String recResult="";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rec);
 
         text_tip=(TextView)findViewById(R.id.text_tip);
+        btn_re=(ImageView)findViewById(R.id.btn_re);
+        btn_ok=(ImageView)findViewById(R.id.btn_ok);
+        btn_no=(ImageView)findViewById(R.id.btn_no);
+
+        btn_ok.setEnabled(false);
+        btn_ok.setVisibility(View.GONE);
+
+        btn_re.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btn_ok.setEnabled(false);
+                btn_ok.setVisibility(View.GONE);
+                startRec();
+            }
+        });
+
+        btn_ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(recActivity.this,SearchResultActivity.class);
+                intent.putExtra("searchStr", recResult);
+                startActivity(intent);
+                int version = Integer.valueOf(android.os.Build.VERSION.SDK);
+                if (version > 5) {
+                    overridePendingTransition(R.anim.fade, R.anim.hold);
+                }
+                finish();
+            }
+        });
+
+        btn_no.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                client.speakFinish();
+                int version = Integer.valueOf(android.os.Build.VERSION.SDK);
+                if (version > 5) {
+                    finish();
+                    overridePendingTransition(R.anim.fade, R.anim.back);
+                }
+            }
+        });
+
         startRec();
     }
 
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN) {
             client.speakFinish();
-            Intent intent=new Intent(recActivity.this,MapActivity.class);
-            startActivity(intent);
             int version = Integer.valueOf(android.os.Build.VERSION.SDK);
             if (version > 5) {
-                overridePendingTransition(R.anim.fade, R.anim.hold);
+                finish();
+                overridePendingTransition(R.anim.fade, R.anim.back);
             }
-            finish();
             return true;
         }
         return super.onKeyDown(keyCode, event);
@@ -106,7 +153,12 @@ public class recActivity extends BaseActivity {
                             itemStr=itemStr.replace("\"]", "");
                             yuyinChoose=itemStr.split("\",\"");
                         } catch (Exception e){}
-                        showMessageByToast(result);
+
+                        text_tip.setText(result);
+                        recResult=result;
+                        btn_ok.setEnabled(true);
+                        btn_ok.setVisibility(View.VISIBLE);
+
                         break;
                     default:
                         break;

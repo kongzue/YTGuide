@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.myzchh.YTGuide.navActivity"
+    android:clickable="false">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/box_compass"
+        android:visibility="visible"
+        android:focusable="true"
+        android:background="#d8000000">
+
+        <SurfaceView
+            android:id="@+id/cp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="173°"
+            android:fontFamily="sans-serif-light"
+            android:id="@+id/text_compass"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff"
+            android:textSize="80dp"
+            android:layout_marginTop="100dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/text_ori"
+            android:layout_below="@+id/text_compass"
+            android:layout_centerHorizontal="true"
+            android:textColor="#80ffffff"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="西北"
+            android:id="@+id/text_Tip"
+            android:fontFamily="sans-serif-light"
+            android:textColor="#ffffff"
+            android:layout_alignTop="@+id/text_compass"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-30dp"
+            android:textSize="20dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#54ffffff"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/box_info"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="图书馆"
+                android:id="@+id/text_title"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="25dp"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="正前方距离≈50m"
+                android:id="@+id/text_jl"
+                android:layout_alignBottom="@+id/text_title"
+                android:layout_toRightOf="@+id/text_title"
+                android:layout_toEndOf="@+id/text_title"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="1dp"
+                android:textColor="#9cffffff"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="图书馆是学院的文献信息中心，是为教学和科研服务的学术性机构，是学校信息化和社会信息化的重要基地。图书馆的建设和发展应与学校的建设和发展相适应，其水平是学校总体水平的重要标志。"
+                android:id="@+id/text_body"
+                android:layout_below="@+id/text_title"
+                android:layout_alignLeft="@+id/text_title"
+                android:layout_alignStart="@+id/text_title"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:textColor="#e7ffffff"
+                android:layout_marginBottom="20dp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

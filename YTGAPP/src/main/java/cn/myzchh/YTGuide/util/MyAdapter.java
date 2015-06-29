@@ -41,7 +41,7 @@ public class MyAdapter extends SimpleAdapter {
     public View getView(int position, View convertView, final ViewGroup parent) {
 
         if (convertView == null) {
-            convertView = mInflater.inflate(R.layout.invite_listitem, null);
+            convertView = mInflater.inflate(R.layout.item_search_result, null);
 //            layout_comment=(LinearLayout)convertView.findViewById(R.id.layout_comment);
 //            text_Text=(TextView)convertView.findViewById(R.id.text_Text);
 //            ico_Person=(ImageView)convertView.findViewById(R.id.ico_Person);

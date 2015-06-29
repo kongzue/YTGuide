@@ -28,4 +28,33 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="40dp" />
 
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/btn_re"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_rec_re"
+        android:clickable="true" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/btn_ok"
+        android:layout_alignBottom="@+id/btn_re"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/btn_rec_ok"
+        android:clickable="true" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/btn_no"
+        android:layout_alignBottom="@+id/btn_re"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/btn_rec_no"
+        android:clickable="true" />
+
 </RelativeLayout>

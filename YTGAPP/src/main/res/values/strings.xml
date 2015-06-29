@@ -13,5 +13,10 @@
     <string name="title_activity_first">firstActivity</string>
     <string name="title_activity_map">MapActivity</string>
     <string name="title_activity_rec">recActivity</string>
+    <string name="title_activity_nav">navActivity</string>
+    <string name="title_activity_search_result">SearchResultActivity</string>
+    <string name="title_activity_comment">commentActivity</string>
+    <string name="title_activity_login">loginActivity</string>
+    <string name="title_activity_about">aboutActivity</string>
 
 </resources>

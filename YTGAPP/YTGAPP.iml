@@ -91,9 +91,12 @@
     <orderEntry type="jdk" jdkName="Android API 21 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="appcompat-v7-21.0.3" level="project" />
+    <orderEntry type="library" exported="" name="baidumapapi_v3_4_0" level="project" />
+    <orderEntry type="library" exported="" name="locSDK_5.0" level="project" />
     <orderEntry type="library" exported="" name="support-v4-21.0.3" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-21.0.3" level="project" />
     <orderEntry type="library" exported="" name="VoiceRecognition-1.4" level="project" />
+    <orderEntry type="library" exported="" name="BaiduLBS_Android" level="project" />
     <orderEntry type="library" exported="" name="galaxy" level="project" />
     <orderEntry type="library" exported="" name="Baidu-SpeechRecognitionUI-SDK-Android-1.4" level="project" />
   </component>

@@ -1,8 +1,8 @@
 package cn.myzchh.YTGuide.util;
 
 public class Message {
-	private int type;//指定是哪种类型
-	private String value;//值
+	private int type;
+	private String value;
 	private String name;
 
 	public int getFaceResID() {

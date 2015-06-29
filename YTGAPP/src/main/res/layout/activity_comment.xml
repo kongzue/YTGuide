@@ -1,0 +1,138 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.myzchh.YTGuide.commentActivity"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="#ffffff">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:id="@+id/image_point"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/p_normal"
+        android:cropToPadding="false"
+        android:layout_marginTop="-60dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:layout_alignBottom="@+id/image_point"
+        android:layout_alignLeft="@+id/image_point"
+        android:layout_alignStart="@+id/image_point"
+        android:background="@drawable/p_comment_pjl"
+        android:layout_alignRight="@+id/image_point"
+        android:layout_alignEnd="@+id/image_point" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="移通正门"
+        android:id="@+id/text_name"
+        android:shadowColor="#93010000"
+        android:textColor="#ffffff"
+        android:shadowDx="0"
+        android:shadowDy="2"
+        android:shadowRadius="1"
+        android:textSize="28sp"
+        android:layout_marginTop="55dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="这里是移通正门，正门外有许多超市、餐厅，以及购物休闲场所，晚上会有重庆本地特色小吃摊。"
+        android:id="@+id/text_info"
+        android:layout_below="@+id/text_name"
+        android:layout_alignLeft="@+id/text_name"
+        android:layout_alignStart="@+id/text_name"
+        android:textColor="#ffffff"
+        android:textSize="12sp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="评论"
+        android:id="@+id/textView4"
+        android:layout_above="@+id/text_info"
+        android:layout_toRightOf="@+id/text_name"
+        android:layout_toEndOf="@+id/text_name"
+        android:textColor="#ffffff"
+        android:textSize="15dp"
+        android:layout_marginBottom="2dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="400dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#e8e8e8"
+        android:id="@+id/linearLayout">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:id="@+id/edit_comment"
+            android:layout_weight="1"
+            android:hint="输入评论"
+            android:layout_marginLeft="10dp"
+            android:textSize="14dp"
+            android:background="#00ffffff" />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="发布"
+            android:id="@+id/btn_comment"
+            android:textSize="14dp"
+            android:background="#3c000000"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/list_comment"
+        android:layout_alignLeft="@+id/image_point"
+        android:layout_alignStart="@+id/image_point"
+        android:layout_below="@+id/image_point"
+        android:layout_above="@+id/linearLayout"
+        tools:listitem="@layout/item_comment"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:id="@+id/imageView4"
+        android:background="@drawable/p_shadow_bkg"
+        android:alpha="0.7"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/image_point"
+        android:layout_alignEnd="@+id/image_point"
+        android:layout_alignLeft="@+id/image_point"
+        android:layout_alignStart="@+id/image_point" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/btn_nav"
+        android:background="@drawable/ic_nav_w"
+        android:clickable="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="55dp" />
+
+</RelativeLayout>

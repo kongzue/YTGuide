@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.myzchh.YTGuide.aboutActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:background="@drawable/p_first_bkg"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+
+    <ImageView
+        android:layout_width="175dp"
+        android:layout_height="500dp"
+        android:id="@+id/imageIcon"
+        android:background="@drawable/p_logo_w"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="游移通 · 移通校内专属导航APP"
+        android:id="@+id/textView"
+        android:layout_marginTop="200dp"
+        android:layout_alignTop="@+id/imageIcon"
+        android:layout_centerHorizontal="true"
+        android:textSize="15dp"
+        android:textColor="#020202" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="服务端主程：张鑫\n客户端开发：张超、刘帅、陈杨\n系统测试：冉婷婷、何华、谭玉霞、杨云柳、覃琪\n实施：王森"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:textSize="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="官方讨论QQ群：429097248 \n期待您的加入！"
+        android:id="@+id/textView6"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:textSize="12dp"
+        android:gravity="center"/>
+
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="60dp"
+        android:id="@+id/button_Back"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/btn_back_w"
+        android:layout_marginTop="19dp"
+        android:clickable="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="官方网站：http://YTGuide.sinaapp.com"
+        android:id="@+id/text_website"
+        android:textSize="12dp"
+        android:gravity="center"
+        android:layout_below="@+id/textView6"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:textColor="#447cd4"
+        android:clickable="true" />
+
+</RelativeLayout>

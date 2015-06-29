@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:id="@+id/text_name"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#010101"
+        android:layout_margin="10dp"
+        android:textSize="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=":"
+        android:id="@+id/textView5"
+        android:layout_alignBottom="@+id/text_name"
+        android:layout_toRightOf="@+id/text_name"
+        android:layout_toEndOf="@+id/text_name"
+        android:textColor="#010101"
+        android:layout_marginLeft="-9dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext"
+        android:id="@+id/text_body"
+        android:layout_below="@+id/text_name"
+        android:layout_alignLeft="@+id/text_name"
+        android:layout_alignStart="@+id/text_name"
+        android:textColor="#91010000"
+        android:textSize="14dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="-8dp" />
+
+</RelativeLayout>

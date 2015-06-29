@@ -42,8 +42,6 @@ public class DBManager {
         } finally {
             c.close();
         }
-        localUser.setUSERNAME(local_name);
-        localUser.setUUID(local_uuid);
     }
 
     public void closeDB() {

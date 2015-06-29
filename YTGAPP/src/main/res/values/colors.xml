@@ -6,4 +6,7 @@
     <color name="btn_exit_off">#ffff4200</color>
     <color name="btn_exit_down">#ffc23300</color>
     <color name="color_error">#FFFF3300</color>
+    <color name="button_normal">#3c000000</color>
+    <color name="button_shadow">#70000000</color>
+    <color name="button_alpha">#00000000</color>
 </resources>

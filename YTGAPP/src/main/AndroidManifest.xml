@@ -7,11 +7,28 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="afgzWot6mOHAhmG4CBubAVb9" />
+
         <activity
             android:name="cn.myzchh.YTGuide.firstActivity"
             android:label="@string/app_name" >
@@ -22,31 +39,49 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.stx.voicenote.MainActivity"
-            android:label="@string/app_name" >
-        </activity>
-        <activity
-            android:name="com.stx.voicenote.InviteActivity"
-            android:label="invite" >
-        </activity>
-        <activity
-            android:name="com.stx.voicenote.RoomActivity"
-            android:configChanges="orientation|keyboardHidden|screenLayout"
-            android:label="room"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan" >
-        </activity>
-        <activity
-            android:name="com.stx.voicenote.RegistActivity"
-            android:label="@string/title_activity_regist" >
-        </activity>
-        <activity
             android:name="cn.myzchh.YTGuide.MapActivity"
             android:label="@string/title_activity_map" >
         </activity>
         <activity
             android:name="cn.myzchh.YTGuide.recActivity"
             android:label="@string/title_activity_rec" >
+        </activity>
+        <activity
+            android:name="cn.myzchh.YTGuide.testActivity"
+            android:label="@string/title_activity_test"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.myzchh.YTGuide.navActivity"
+            android:label="@string/title_activity_nav" >
+        </activity>
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+
+        <activity
+            android:name="cn.myzchh.YTGuide.SearchResultActivity"
+            android:label="@string/title_activity_search_result" >
+        </activity>
+        <activity
+            android:name="cn.myzchh.YTGuide.commentActivity"
+            android:label="@string/title_activity_comment"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name="cn.myzchh.YTGuide.loginActivity"
+            android:label="@string/title_activity_login" >
+        </activity>
+        <activity
+            android:name="cn.myzchh.YTGuide.registActivity"
+            android:label="@string/title_activity_regist" >
+        </activity>
+        <activity
+            android:name="cn.myzchh.YTGuide.aboutActivity"
+            android:label="@string/title_activity_about" >
         </activity>
     </application>
 

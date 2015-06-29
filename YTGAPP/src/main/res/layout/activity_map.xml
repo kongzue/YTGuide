@@ -3,6 +3,19 @@
     android:layout_height="match_parent"
     tools:context="cn.myzchh.YTGuide.MapActivity">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/box_map">
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clickable="true" />
+
+    </RelativeLayout>
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -10,27 +23,42 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:background="@drawable/p_map_bkg" />
+        android:background="@drawable/p_map_bkg"
+        android:clickable="true"
+        android:visibility="gone" />
+
 
     <RelativeLayout
-        android:layout_width="300dp"
-        android:layout_height="50dp"
+        android:layout_width="310dp"
+        android:layout_height="53dp"
         android:background="@drawable/p_searchbox_bkg"
-        android:layout_below="@+id/imageView5"
-        android:layout_centerHorizontal="true">
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp">
 
         <EditText
             android:layout_width="230dp"
             android:layout_height="wrap_content"
-            android:id="@+id/editText"
+            android:id="@+id/edit_search"
             android:background="#00ffffff"
             android:hint="搜索校内"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_marginLeft="18dp"
-            android:layout_marginTop="11dp"
+            android:layout_marginTop="13dp"
             android:textSize="15dp" />
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/btn_search"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="#00ffffff"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="6dp" />
     </RelativeLayout>
 
     <ImageView
