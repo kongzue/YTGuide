@@ -139,7 +139,7 @@ public class MapActivity extends BaseActivity {
     private LatLng point13 = new LatLng(30.0026068775,106.2450962949);
     private Marker maker13;
     // 第六教学楼
-    private LatLng point14 = new LatLng(30.0022498775,106.2468822949);
+    private LatLng point14 = new LatLng(30.0022030241,106.2449881059);
     private Marker maker14;
     // 第七教学楼
     private LatLng point15 = new LatLng(30.0037878775,106.2473462949);
@@ -154,10 +154,10 @@ public class MapActivity extends BaseActivity {
     private LatLng point18 = new LatLng(30.0033690000,106.2466740000);
     private Marker maker18;
     // 行政楼
-    private LatLng point19 = new LatLng(30.0022500000,106.2449180000);
+    private LatLng point19 = new LatLng(30.0021821176,106.2460180741);
     private Marker maker19;
     // 移通正门
-    private LatLng point20 = new LatLng(30.0043950000,106.2469690000);
+    private LatLng point20 = new LatLng(30.0043520000,106.2474230000);
     private Marker maker20;
     // 移通南门
     private LatLng point21 = new LatLng(30.0020770000,106.2455090000);
