@@ -29,9 +29,13 @@ import com.baidu.mapapi.search.route.OnGetRoutePlanResultListener;
 import com.baidu.mapapi.search.route.PlanNode;
 import com.baidu.mapapi.search.route.RoutePlanSearch;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.hardware.SensorManager;
+import android.net.Uri;
+import android.os.AsyncTask;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -47,6 +51,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
+import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ZoomControls;
@@ -70,7 +75,23 @@ import com.baidu.mapapi.search.route.WalkingRoutePlanOption;
 import com.baidu.mapapi.search.route.WalkingRouteResult;
 import com.example.androidtestproject.testapp.R;
 
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.protocol.HTTP;
+import org.apache.http.util.EntityUtils;
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.json.JSONTokener;
+
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 import cn.myzchh.YTGuide.util.BaseActivity;
 import cn.myzchh.YTGuide.util.localUser;
@@ -245,6 +266,8 @@ public class MapActivity extends BaseActivity {
 
         loadAnim();
 
+        doUpDate();
+
         btn_rec.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -394,7 +417,80 @@ public class MapActivity extends BaseActivity {
 
     }//end OnCreate
 
+    private void doUpDate(){
+        //抓取评论
+        new AsyncTask<String, Void, Object>() {
+            @Override
+            protected Object doInBackground(String... params) {
+                String url = "http://ytguide.sinaapp.com/up.html";
+                String result = "";
+                try {
+                    //创建连接
+                    HttpClient httpClient = new DefaultHttpClient();
+                    HttpPost post = new HttpPost(url);
+                    //设置参数，仿html表单提交
 
+                    List<NameValuePair> paramList = new ArrayList<NameValuePair>();
+
+                    post.setEntity(new UrlEncodedFormEntity(paramList, HTTP.UTF_8));
+                    //发送HttpPost请求，并返回HttpResponse对象
+                    HttpResponse httpResponse = httpClient.execute(post);
+                    // 判断请求响应状态码，状态码为200表示服务端成功响应了客户端的请求
+                    if (httpResponse.getStatusLine().getStatusCode() == 200) {
+                        //获取返回结果
+                        result = EntityUtils.toString(httpResponse.getEntity());
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    System.out.println("update_failed!");
+                }
+                return result;
+            }
+
+            protected void onPostExecute(Object result) {
+                super.onPostExecute(result);
+                System.out.println("update_result:"+result);
+                try {
+                    JSONTokener jsonParser = new JSONTokener(result + "");
+                    JSONObject loginmsg = (JSONObject) jsonParser.nextValue();
+                    if(loginmsg.getBoolean("status")){
+                        String ver=loginmsg.getString("ver");
+                        String info=loginmsg.getString("info");
+                        if (!ver.equals("beta0003")){
+                            showUpdateDialog(ver,info);
+                        }
+                    }else{
+                        showMessageByToast("无法检查更新");
+                    }
+                }catch (Exception e){
+                    e.printStackTrace();
+                    showMessageByToast("更新服务器响应失败。");
+                }
+            }
+        }.execute();
+    }
+
+    private void showUpdateDialog(String ver, String info) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(MapActivity.this);
+        builder.setMessage("发现新版本，是否立即更新？");
+        builder.setTitle("发现新版本"+ver);
+        builder.setPositiveButton("更新", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("http://ytguide.sinaapp.com/Downloads/yyt.apk"));
+                startActivity(intent);
+                dialog.dismiss();
+            }
+        });
+        builder.setNegativeButton("取消", new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        builder.create().show();
+    }
 
 
     private void walkToPoint(double x, double y){

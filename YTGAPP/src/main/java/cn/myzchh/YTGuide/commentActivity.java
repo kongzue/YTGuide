@@ -19,6 +19,7 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 import com.example.androidtestproject.testapp.R;
 
 import org.apache.http.HttpResponse;
@@ -239,8 +240,32 @@ public class commentActivity extends BaseActivity {
             case "移通游泳馆":
                 image_point.setBackgroundResource(R.drawable.p_youyong);
                 break;
-            case "C区宿舍楼":
-                image_point.setBackgroundResource(R.drawable.p_c_sushe);
+            case "篮球场":
+                image_point.setBackgroundResource(R.drawable.p_lanqiuchang);
+                break;
+            case "移通北门":
+                image_point.setBackgroundResource(R.drawable.p_beimen);
+                break;
+            case "宾果城商业步行街":
+                image_point.setBackgroundResource(R.drawable.p_binguo);
+                break;
+            case "移通操场":
+                image_point.setBackgroundResource(R.drawable.p_caochang);
+                break;
+            case "花果山香樟书院":
+                image_point.setBackgroundResource(R.drawable.p_huaguoshan);
+                break;
+            case "第六教学楼":
+                image_point.setBackgroundResource(R.drawable.p_liujiao);
+                break;
+            case "移通南门":
+                image_point.setBackgroundResource(R.drawable.p_nanmen);
+                break;
+            case "行政楼":
+                image_point.setBackgroundResource(R.drawable.p_xingzheng);
+                break;
+            case "第一实验楼":
+                image_point.setBackgroundResource(R.drawable.p_yishi);
                 break;
             default:
                 image_point.setBackgroundResource(R.drawable.p_normal);

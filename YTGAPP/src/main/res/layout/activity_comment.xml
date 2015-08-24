@@ -15,7 +15,9 @@
         android:layout_alignParentStart="true"
         android:background="@drawable/p_normal"
         android:cropToPadding="false"
-        android:layout_marginTop="-60dp" />
+        android:layout_marginTop="-60dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <ImageView
         android:layout_width="wrap_content"
